@@ -1,0 +1,8 @@
+<h1>Welcome to Yelp</h1>
+
+<% @restaurants.each do |restaurant| %>
+  <h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3>
+  <p>Address: <%= restaurant.address %></p>
+  <p>Phone number: <%= restaurant.phone_number %></p>
+  <p>Restaurant type: <%= restaurant.category %></p>
+<% end %>
